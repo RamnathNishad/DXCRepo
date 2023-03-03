@@ -1,1 +1,2 @@
 This is line 1 in file2 at F1
+welcome msg at in file2 at F2
