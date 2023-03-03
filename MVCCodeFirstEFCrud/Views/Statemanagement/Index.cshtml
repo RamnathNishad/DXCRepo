@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    ViewBag.Username = "Ramnath";
+
+    TempData.Keep("y");
+
+    var z = (int)Session["Z"];
+}
+
+<h2>Index</h2>
+
+X=@ViewData["x"].ToString()
+Y=@TempData["y"].ToString()
+Z=@z
+<p>
+    @Html.ActionLink("Goto Second Page", "Second")
+</p>
+<p>
+    User Name : @ViewBag.Username
+</p>
+<p>
+    City : @ViewBag.City
+</p>
