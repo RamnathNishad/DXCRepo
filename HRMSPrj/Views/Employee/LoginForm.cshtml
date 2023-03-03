@@ -1,0 +1,36 @@
+﻿@model HRMSPrj.Models.UserDetails
+
+@{
+    ViewBag.Title = "LoginForm";
+}
+
+<h2>LoginForm</h2>
+
+
+@*<form method="post">
+    Enter username:<input type="text" name="uname" /><br />
+    Enter password:<input type="password" name="pwd" /><br />
+
+    <input type="submit" value="Submit" />
+</form>*@
+
+@*<form method="post">
+    @Html.DisplayName("Enter username")
+    @Html.TextBox("uname")
+    <br/>
+    @Html.DisplayName("Enter password")
+    @Html.Password("pwd")
+
+    <input type="submit" value="Submit" />
+</form>*@
+
+@using (Html.BeginForm())
+{
+    @Html.DisplayNameFor(model => model.uname)
+    @Html.TextBoxFor(model => model.uname)
+
+    @Html.DisplayNameFor(model => model.pwd)
+    @Html.PasswordFor(model => model.pwd)
+
+    <input type="submit" value="Submit" />
+}

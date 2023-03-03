@@ -1,0 +1,27 @@
+﻿@using HRMSPrj.Models
+
+@{
+    ViewBag.Title = "Index";
+    var lstEmp = (List<Employee>)ViewData["emps"];
+}
+
+<h2>Index</h2>
+
+
+
+<table class="table">
+    <thead>
+        <tr><th>Ecode</th><th>Ename</th><th>Salary</th><th>Deptid</th></tr>
+    </thead>
+    <tbody>
+        @foreach (var item in lstEmp)
+        {
+            <tr>
+                <td>@item.Ecode</td>
+                <td>@item.Ename</td>
+                <td>@item.Salary</td>
+                <td>@item.Deptid</td>
+            </tr>
+        }
+    </tbody>
+</table>

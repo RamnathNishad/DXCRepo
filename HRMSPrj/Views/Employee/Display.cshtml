@@ -1,0 +1,40 @@
+﻿@model IEnumerable<HRMSPrj.Models.Employee>
+
+@{
+    ViewBag.Title = "Display";
+    
+}
+
+<h2>Display</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Ecode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ename)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Salary)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Deptid)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+   @Html.Partial("_EmpItemView",item)
+}
+
+</table>
+
+
+@section s1{
+    <p> This is section s1</p>
+    <h3>Testing the Section in layout</h3>
+    }

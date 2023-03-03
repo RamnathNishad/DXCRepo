@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Display";
+    var msg = "Ramnath Nishad";
+    var cities =(List<string>) ViewData["cities"];
+}
+
+<h2>Display</h2>
+<h3>Welcome to my First ASP.NET MVC HelloWorld App</h3>
+<p> Welcome @msg</p>
+@if (cities == null)
+{
+    <h3>No cities to display</h3>
+}
+else
+{
+    <ul>
+        @foreach (var item in cities)
+        {
+            <li>@item</li>
+        }
+    </ul>
+}

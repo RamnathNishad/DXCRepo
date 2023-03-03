@@ -1,0 +1,22 @@
+﻿@model IEnumerable<HRMSPrj.Models.Employee>
+
+@{
+    ViewBag.Title = "Home";
+}
+
+<h2>Home</h2>
+
+<h1>List of Employees</h1>
+<hr />
+<table class="table">
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Ecode</td>
+            <td>@item.Ename</td>
+            <td>@item.Salary</td>
+            <td>@item.Deptid</td>
+        </tr>
+    }
+
+</table>
